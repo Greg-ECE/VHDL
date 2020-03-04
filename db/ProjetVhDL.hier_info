@@ -1,0 +1,465 @@
+|top
+clk => dc:Div.clk
+a1[0] << dcd:D1.q[0]
+a1[1] << dcd:D1.q[1]
+a1[2] << dcd:D1.q[2]
+a1[3] << dcd:D1.q[3]
+a1[4] << dcd:D1.q[4]
+a1[5] << dcd:D1.q[5]
+a1[6] << dcd:D1.q[6]
+a2[0] << dcd:D2.q[0]
+a2[1] << dcd:D2.q[1]
+a2[2] << dcd:D2.q[2]
+a2[3] << dcd:D2.q[3]
+a2[4] << dcd:D2.q[4]
+a2[5] << dcd:D2.q[5]
+a2[6] << dcd:D2.q[6]
+a3[0] << dcd:D3.q[0]
+a3[1] << dcd:D3.q[1]
+a3[2] << dcd:D3.q[2]
+a3[3] << dcd:D3.q[3]
+a3[4] << dcd:D3.q[4]
+a3[5] << dcd:D3.q[5]
+a3[6] << dcd:D3.q[6]
+a4[0] << dcd:D4.q[0]
+a4[1] << dcd:D4.q[1]
+a4[2] << dcd:D4.q[2]
+a4[3] << dcd:D4.q[3]
+a4[4] << dcd:D4.q[4]
+a4[5] << dcd:D4.q[5]
+a4[6] << dcd:D4.q[6]
+a5[0] << dcd:D5.q[0]
+a5[1] << dcd:D5.q[1]
+a5[2] << dcd:D5.q[2]
+a5[3] << dcd:D5.q[3]
+a5[4] << dcd:D5.q[4]
+a5[5] << dcd:D5.q[5]
+a5[6] << dcd:D5.q[6]
+a6[0] << dcd:D6.q[0]
+a6[1] << dcd:D6.q[1]
+a6[2] << dcd:D6.q[2]
+a6[3] << dcd:D6.q[3]
+a6[4] << dcd:D6.q[4]
+a6[5] << dcd:D6.q[5]
+a6[6] << dcd:D6.q[6]
+
+
+|top|dc:Div
+clk => TwoHzclk~reg0.CLK
+clk => timer[0].CLK
+clk => timer[1].CLK
+clk => timer[2].CLK
+clk => timer[3].CLK
+clk => timer[4].CLK
+clk => timer[5].CLK
+clk => timer[6].CLK
+clk => timer[7].CLK
+clk => timer[8].CLK
+clk => timer[9].CLK
+clk => timer[10].CLK
+clk => timer[11].CLK
+clk => timer[12].CLK
+clk => timer[13].CLK
+clk => timer[14].CLK
+clk => timer[15].CLK
+clk => timer[16].CLK
+clk => timer[17].CLK
+clk => timer[18].CLK
+clk => timer[19].CLK
+clk => timer[20].CLK
+clk => timer[21].CLK
+clk => timer[22].CLK
+TwoHzclk <= TwoHzclk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|mae:Christophe
+clk => cpt[0].CLK
+clk => cpt[1].CLK
+clk => cpt[2].CLK
+clk => cpt[3].CLK
+clk => cpt[4].CLK
+q[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bd:B1
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bd:B2
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bd:B3
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bd:B4
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bd:B5
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bd:B6
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|dcd:D1
+d[0] => Mux0.IN36
+d[0] => Mux1.IN36
+d[0] => Mux2.IN36
+d[0] => Mux3.IN36
+d[0] => Mux4.IN36
+d[0] => Mux5.IN36
+d[0] => Mux6.IN36
+d[1] => Mux0.IN35
+d[1] => Mux1.IN35
+d[1] => Mux2.IN35
+d[1] => Mux3.IN35
+d[1] => Mux4.IN35
+d[1] => Mux5.IN35
+d[1] => Mux6.IN35
+d[2] => Mux0.IN34
+d[2] => Mux1.IN34
+d[2] => Mux2.IN34
+d[2] => Mux3.IN34
+d[2] => Mux4.IN34
+d[2] => Mux5.IN34
+d[2] => Mux6.IN34
+d[3] => Mux0.IN33
+d[3] => Mux1.IN33
+d[3] => Mux2.IN33
+d[3] => Mux3.IN33
+d[3] => Mux4.IN33
+d[3] => Mux5.IN33
+d[3] => Mux6.IN33
+d[4] => Mux0.IN32
+d[4] => Mux1.IN32
+d[4] => Mux2.IN32
+d[4] => Mux3.IN32
+d[4] => Mux4.IN32
+d[4] => Mux5.IN32
+d[4] => Mux6.IN32
+q[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|dcd:D2
+d[0] => Mux0.IN36
+d[0] => Mux1.IN36
+d[0] => Mux2.IN36
+d[0] => Mux3.IN36
+d[0] => Mux4.IN36
+d[0] => Mux5.IN36
+d[0] => Mux6.IN36
+d[1] => Mux0.IN35
+d[1] => Mux1.IN35
+d[1] => Mux2.IN35
+d[1] => Mux3.IN35
+d[1] => Mux4.IN35
+d[1] => Mux5.IN35
+d[1] => Mux6.IN35
+d[2] => Mux0.IN34
+d[2] => Mux1.IN34
+d[2] => Mux2.IN34
+d[2] => Mux3.IN34
+d[2] => Mux4.IN34
+d[2] => Mux5.IN34
+d[2] => Mux6.IN34
+d[3] => Mux0.IN33
+d[3] => Mux1.IN33
+d[3] => Mux2.IN33
+d[3] => Mux3.IN33
+d[3] => Mux4.IN33
+d[3] => Mux5.IN33
+d[3] => Mux6.IN33
+d[4] => Mux0.IN32
+d[4] => Mux1.IN32
+d[4] => Mux2.IN32
+d[4] => Mux3.IN32
+d[4] => Mux4.IN32
+d[4] => Mux5.IN32
+d[4] => Mux6.IN32
+q[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|dcd:D3
+d[0] => Mux0.IN36
+d[0] => Mux1.IN36
+d[0] => Mux2.IN36
+d[0] => Mux3.IN36
+d[0] => Mux4.IN36
+d[0] => Mux5.IN36
+d[0] => Mux6.IN36
+d[1] => Mux0.IN35
+d[1] => Mux1.IN35
+d[1] => Mux2.IN35
+d[1] => Mux3.IN35
+d[1] => Mux4.IN35
+d[1] => Mux5.IN35
+d[1] => Mux6.IN35
+d[2] => Mux0.IN34
+d[2] => Mux1.IN34
+d[2] => Mux2.IN34
+d[2] => Mux3.IN34
+d[2] => Mux4.IN34
+d[2] => Mux5.IN34
+d[2] => Mux6.IN34
+d[3] => Mux0.IN33
+d[3] => Mux1.IN33
+d[3] => Mux2.IN33
+d[3] => Mux3.IN33
+d[3] => Mux4.IN33
+d[3] => Mux5.IN33
+d[3] => Mux6.IN33
+d[4] => Mux0.IN32
+d[4] => Mux1.IN32
+d[4] => Mux2.IN32
+d[4] => Mux3.IN32
+d[4] => Mux4.IN32
+d[4] => Mux5.IN32
+d[4] => Mux6.IN32
+q[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|dcd:D4
+d[0] => Mux0.IN36
+d[0] => Mux1.IN36
+d[0] => Mux2.IN36
+d[0] => Mux3.IN36
+d[0] => Mux4.IN36
+d[0] => Mux5.IN36
+d[0] => Mux6.IN36
+d[1] => Mux0.IN35
+d[1] => Mux1.IN35
+d[1] => Mux2.IN35
+d[1] => Mux3.IN35
+d[1] => Mux4.IN35
+d[1] => Mux5.IN35
+d[1] => Mux6.IN35
+d[2] => Mux0.IN34
+d[2] => Mux1.IN34
+d[2] => Mux2.IN34
+d[2] => Mux3.IN34
+d[2] => Mux4.IN34
+d[2] => Mux5.IN34
+d[2] => Mux6.IN34
+d[3] => Mux0.IN33
+d[3] => Mux1.IN33
+d[3] => Mux2.IN33
+d[3] => Mux3.IN33
+d[3] => Mux4.IN33
+d[3] => Mux5.IN33
+d[3] => Mux6.IN33
+d[4] => Mux0.IN32
+d[4] => Mux1.IN32
+d[4] => Mux2.IN32
+d[4] => Mux3.IN32
+d[4] => Mux4.IN32
+d[4] => Mux5.IN32
+d[4] => Mux6.IN32
+q[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|dcd:D5
+d[0] => Mux0.IN36
+d[0] => Mux1.IN36
+d[0] => Mux2.IN36
+d[0] => Mux3.IN36
+d[0] => Mux4.IN36
+d[0] => Mux5.IN36
+d[0] => Mux6.IN36
+d[1] => Mux0.IN35
+d[1] => Mux1.IN35
+d[1] => Mux2.IN35
+d[1] => Mux3.IN35
+d[1] => Mux4.IN35
+d[1] => Mux5.IN35
+d[1] => Mux6.IN35
+d[2] => Mux0.IN34
+d[2] => Mux1.IN34
+d[2] => Mux2.IN34
+d[2] => Mux3.IN34
+d[2] => Mux4.IN34
+d[2] => Mux5.IN34
+d[2] => Mux6.IN34
+d[3] => Mux0.IN33
+d[3] => Mux1.IN33
+d[3] => Mux2.IN33
+d[3] => Mux3.IN33
+d[3] => Mux4.IN33
+d[3] => Mux5.IN33
+d[3] => Mux6.IN33
+d[4] => Mux0.IN32
+d[4] => Mux1.IN32
+d[4] => Mux2.IN32
+d[4] => Mux3.IN32
+d[4] => Mux4.IN32
+d[4] => Mux5.IN32
+d[4] => Mux6.IN32
+q[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|dcd:D6
+d[0] => Mux0.IN36
+d[0] => Mux1.IN36
+d[0] => Mux2.IN36
+d[0] => Mux3.IN36
+d[0] => Mux4.IN36
+d[0] => Mux5.IN36
+d[0] => Mux6.IN36
+d[1] => Mux0.IN35
+d[1] => Mux1.IN35
+d[1] => Mux2.IN35
+d[1] => Mux3.IN35
+d[1] => Mux4.IN35
+d[1] => Mux5.IN35
+d[1] => Mux6.IN35
+d[2] => Mux0.IN34
+d[2] => Mux1.IN34
+d[2] => Mux2.IN34
+d[2] => Mux3.IN34
+d[2] => Mux4.IN34
+d[2] => Mux5.IN34
+d[2] => Mux6.IN34
+d[3] => Mux0.IN33
+d[3] => Mux1.IN33
+d[3] => Mux2.IN33
+d[3] => Mux3.IN33
+d[3] => Mux4.IN33
+d[3] => Mux5.IN33
+d[3] => Mux6.IN33
+d[4] => Mux0.IN32
+d[4] => Mux1.IN32
+d[4] => Mux2.IN32
+d[4] => Mux3.IN32
+d[4] => Mux4.IN32
+d[4] => Mux5.IN32
+d[4] => Mux6.IN32
+q[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

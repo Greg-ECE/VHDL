@@ -1,0 +1,12 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity mae is 
+	port (clk : in std_logic;
+			q : out std_logic_vector(7 downto 0));
+end;
+
+architecture behavioural of mae is
+
+signal cpt : 
