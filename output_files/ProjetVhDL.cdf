@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M25DAF484) Path("C:/Users/grego/OneDrive/Documents/ECE/Annee 2019-2020 - ING2/Projet VHDL/Code Projet/output_files/") File("ProjetVhDL.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/output_files/") File("ProjetVhDL.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

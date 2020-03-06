@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ProjetVhDL
-Fri Mar  6 14:40:29 2020
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Fri Mar 06 21:25:55 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -13,19 +13,21 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2019  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -35,24 +37,23 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar  6 14:40:29 2020       ;
-; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 06 21:25:55 2020       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ProjetVhDL                                  ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 186                                         ;
-;     Total combinational functions  ; 160                                         ;
-;     Dedicated logic registers      ; 61                                          ;
-; Total registers                    ; 61                                          ;
-; Total pins                         ; 44                                          ;
+; Total logic elements               ; 237                                         ;
+;     Total combinational functions  ; 211                                         ;
+;     Dedicated logic registers      ; 62                                          ;
+; Total registers                    ; 62                                          ;
+; Total pins                         ; 46                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -67,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; 10M25DAF484C7G     ;                    ;
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
 ; Top-level entity name                                            ; top                ; ProjetVhDL         ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Type of Retiming Performed During Resynthesis                    ; Full               ;                    ;
@@ -169,73 +170,91 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                              ;
-+----------------------------------+-----------------+-----------------+------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path       ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------+---------+
-; bd.vhd                           ; yes             ; User VHDL File  ; /home/benoit/dev/FPGA/VHDL/bd.vhd  ;         ;
-; dcd.vhd                          ; yes             ; User VHDL File  ; /home/benoit/dev/FPGA/VHDL/dcd.vhd ;         ;
-; top.vhd                          ; yes             ; User VHDL File  ; /home/benoit/dev/FPGA/VHDL/top.vhd ;         ;
-; dc.vhd                           ; yes             ; User VHDL File  ; /home/benoit/dev/FPGA/VHDL/dc.vhd  ;         ;
-; mae.vhd                          ; yes             ; User VHDL File  ; /home/benoit/dev/FPGA/VHDL/mae.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; bd.vhd                           ; yes             ; User VHDL File  ; D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd      ;         ;
+; dcd.vhd                          ; yes             ; User VHDL File  ; D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/dcd.vhd     ;         ;
+; top.vhd                          ; yes             ; User VHDL File  ; D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd     ;         ;
+; dc.vhd                           ; yes             ; User VHDL File  ; D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/dc.vhd      ;         ;
+; mae.vhd                          ; yes             ; User VHDL File  ; D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/mae.vhd     ;         ;
+; witcher.vhd                      ; yes             ; User VHDL File  ; D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/witcher.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 186             ;
-;                                             ;                 ;
-; Total combinational functions               ; 160             ;
-; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 94              ;
-;     -- 3 input functions                    ; 32              ;
-;     -- <=2 input functions                  ; 34              ;
-;                                             ;                 ;
-; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 134             ;
-;     -- arithmetic mode                      ; 26              ;
-;                                             ;                 ;
-; Total registers                             ; 61              ;
-;     -- Dedicated logic registers            ; 61              ;
-;     -- I/O registers                        ; 0               ;
-;                                             ;                 ;
-; I/O pins                                    ; 44              ;
-;                                             ;                 ;
-; Embedded Multiplier 9-bit elements          ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; dc:Div|TwoHzclk ;
-; Maximum fan-out                             ; 37              ;
-; Total fan-out                               ; 774             ;
-; Average fan-out                             ; 2.50            ;
-+---------------------------------------------+-----------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 237       ;
+;                                             ;           ;
+; Total combinational functions               ; 211       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 96        ;
+;     -- 3 input functions                    ; 71        ;
+;     -- <=2 input functions                  ; 44        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 180       ;
+;     -- arithmetic mode                      ; 31        ;
+;                                             ;           ;
+; Total registers                             ; 62        ;
+;     -- Dedicated logic registers            ; 62        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 46        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; sw9~input ;
+; Maximum fan-out                             ; 48        ;
+; Total fan-out                               ; 963       ;
+; Average fan-out                             ; 2.64      ;
++---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |top                       ; 160 (1)             ; 61 (2)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 44   ; 0            ; 0          ; |top                ; top         ; work         ;
-;    |bd:B1|                 ; 0 (0)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B1          ; bd          ; work         ;
-;    |bd:B2|                 ; 0 (0)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B2          ; bd          ; work         ;
-;    |bd:B3|                 ; 0 (0)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B3          ; bd          ; work         ;
-;    |bd:B4|                 ; 0 (0)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B4          ; bd          ; work         ;
-;    |bd:B5|                 ; 0 (0)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B5          ; bd          ; work         ;
-;    |bd:B6|                 ; 0 (0)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B6          ; bd          ; work         ;
-;    |dc:Div|                ; 29 (29)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dc:Div         ; dc          ; work         ;
-;    |dcd:D1|                ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D1         ; dcd         ; work         ;
-;    |dcd:D2|                ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D2         ; dcd         ; work         ;
-;    |dcd:D3|                ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D3         ; dcd         ; work         ;
-;    |dcd:D4|                ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D4         ; dcd         ; work         ;
-;    |dcd:D5|                ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D5         ; dcd         ; work         ;
-;    |dcd:D6|                ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D6         ; dcd         ; work         ;
-;    |mae:Christophe|        ; 16 (16)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mae:Christophe ; mae         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
++----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name              ; Entity Name ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-------------+--------------+
+; |top                             ; 211 (1)             ; 62 (2)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 46   ; 0            ; 0          ; |top                             ; top         ; work         ;
+;    |bd:B1|                       ; 2 (2)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B1                       ; bd          ; work         ;
+;    |bd:B2|                       ; 2 (2)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B2                       ; bd          ; work         ;
+;    |bd:B3|                       ; 2 (2)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B3                       ; bd          ; work         ;
+;    |bd:B4|                       ; 2 (2)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B4                       ; bd          ; work         ;
+;    |bd:B5|                       ; 2 (2)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B5                       ; bd          ; work         ;
+;    |bd:B6|                       ; 2 (2)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|bd:B6                       ; bd          ; work         ;
+;    |dc:Div|                      ; 31 (31)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dc:Div                      ; dc          ; work         ;
+;    |dcd:D1|                      ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D1                      ; dcd         ; work         ;
+;    |dcd:D2|                      ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D2                      ; dcd         ; work         ;
+;    |dcd:D3|                      ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D3                      ; dcd         ; work         ;
+;    |dcd:D4|                      ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D4                      ; dcd         ; work         ;
+;    |dcd:D5|                      ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D5                      ; dcd         ; work         ;
+;    |dcd:D6|                      ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dcd:D6                      ; dcd         ; work         ;
+;    |mae:Christophe|              ; 23 (23)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mae:Christophe              ; mae         ; work         ;
+;    |witcher:toss_a_coin_to_your| ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|witcher:toss_a_coin_to_your ; witcher     ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; bd:B1|rst_temp                                     ; bd:B1|process_0     ; yes                    ;
+; bd:B6|rst_temp                                     ; bd:B6|process_0     ; yes                    ;
+; bd:B2|rst_temp                                     ; bd:B2|process_0     ; yes                    ;
+; bd:B5|rst_temp                                     ; bd:B5|process_0     ; yes                    ;
+; bd:B3|rst_temp                                     ; bd:B3|process_0     ; yes                    ;
+; bd:B4|rst_temp                                     ; bd:B4|process_0     ; yes                    ;
+; Number of user-specified and inferred latches = 6  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -243,14 +262,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 61    ;
-; Number of registers using Synchronous Clear  ; 28    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 62    ;
+; Number of registers using Synchronous Clear  ; 29    ;
+; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Asynchronous Clear ; 30    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |top|mae:Christophe|cpt[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------+
@@ -258,21 +286,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 44                          ;
-; cycloneiii_ff         ; 61                          ;
-;     SCLR              ; 28                          ;
-;     plain             ; 33                          ;
-; cycloneiii_lcell_comb ; 178                         ;
-;     arith             ; 26                          ;
-;         2 data inputs ; 26                          ;
-;     normal            ; 152                         ;
-;         1 data inputs ; 21                          ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 94                          ;
+; boundary_port         ; 46                          ;
+; cycloneiii_ff         ; 62                          ;
+;     CLR               ; 30                          ;
+;     SCLR              ; 24                          ;
+;     SCLR SLD          ; 5                           ;
+;     plain             ; 3                           ;
+; cycloneiii_lcell_comb ; 229                         ;
+;     arith             ; 31                          ;
+;         2 data inputs ; 31                          ;
+;     normal            ; 198                         ;
+;         1 data inputs ; 22                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 71                          ;
+;         4 data inputs ; 96                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.58                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.17                        ;
 +-----------------------+-----------------------------+
 
 
@@ -290,44 +320,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Fri Mar  6 14:40:19 2020
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Fri Mar 06 21:25:42 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjetVhDL -c ProjetVhDL
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bd.vhd
-    Info (12022): Found design unit 1: bd-behavioural File: /home/benoit/dev/FPGA/VHDL/bd.vhd Line: 11
-    Info (12023): Found entity 1: bd File: /home/benoit/dev/FPGA/VHDL/bd.vhd Line: 5
+    Info (12022): Found design unit 1: bd-behavioural File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd Line: 11
+    Info (12023): Found entity 1: bd File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dcd.vhd
-    Info (12022): Found design unit 1: dcd-behavioural File: /home/benoit/dev/FPGA/VHDL/dcd.vhd Line: 10
-    Info (12023): Found entity 1: dcd File: /home/benoit/dev/FPGA/VHDL/dcd.vhd Line: 5
+    Info (12022): Found design unit 1: dcd-behavioural File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/dcd.vhd Line: 10
+    Info (12023): Found entity 1: dcd File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/dcd.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file top.vhd
-    Info (12022): Found design unit 1: top-behavioural File: /home/benoit/dev/FPGA/VHDL/top.vhd Line: 13
-    Info (12023): Found entity 1: top File: /home/benoit/dev/FPGA/VHDL/top.vhd Line: 5
+    Info (12022): Found design unit 1: top-behavioural File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 13
+    Info (12023): Found entity 1: top File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dc.vhd
-    Info (12022): Found design unit 1: dc-behavioural File: /home/benoit/dev/FPGA/VHDL/dc.vhd Line: 12
-    Info (12023): Found entity 1: dc File: /home/benoit/dev/FPGA/VHDL/dc.vhd Line: 7
+    Info (12022): Found design unit 1: dc-behavioural File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/dc.vhd Line: 12
+    Info (12023): Found entity 1: dc File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/dc.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mae.vhd
-    Info (12022): Found design unit 1: mae-behavioural File: /home/benoit/dev/FPGA/VHDL/mae.vhd Line: 12
-    Info (12023): Found entity 1: mae File: /home/benoit/dev/FPGA/VHDL/mae.vhd Line: 7
+    Info (12022): Found design unit 1: mae-behavioural File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/mae.vhd Line: 12
+    Info (12023): Found entity 1: mae File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/mae.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file witcher.vhd
+    Info (12022): Found design unit 1: witcher-behavioural File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/witcher.vhd Line: 11
+    Info (12023): Found entity 1: witcher File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/witcher.vhd Line: 5
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at top.vhd(62): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/benoit/dev/FPGA/VHDL/top.vhd Line: 62
-Warning (10492): VHDL Process Statement warning at top.vhd(65): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/benoit/dev/FPGA/VHDL/top.vhd Line: 65
-Info (12128): Elaborating entity "dc" for hierarchy "dc:Div" File: /home/benoit/dev/FPGA/VHDL/top.vhd Line: 45
-Info (12128): Elaborating entity "mae" for hierarchy "mae:Christophe" File: /home/benoit/dev/FPGA/VHDL/top.vhd Line: 46
-Info (12128): Elaborating entity "bd" for hierarchy "bd:B1" File: /home/benoit/dev/FPGA/VHDL/top.vhd Line: 47
-Info (12128): Elaborating entity "dcd" for hierarchy "dcd:D1" File: /home/benoit/dev/FPGA/VHDL/top.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at top.vhd(69): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at top.vhd(72): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 72
+Info (12128): Elaborating entity "dc" for hierarchy "dc:Div" File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 51
+Info (12128): Elaborating entity "mae" for hierarchy "mae:Christophe" File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 52
+Info (12128): Elaborating entity "bd" for hierarchy "bd:B1" File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at bd.vhd(21): signal "rst_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd Line: 21
+Warning (10631): VHDL Process Statement warning at bd.vhd(17): inferring latch(es) for signal or variable "rst_temp", which holds its previous value in one or more paths through the process File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd Line: 17
+Info (10041): Inferred latch for "rst_temp" at bd.vhd(17) File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd Line: 17
+Info (12128): Elaborating entity "dcd" for hierarchy "dcd:D1" File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 59
+Info (12128): Elaborating entity "witcher" for hierarchy "witcher:toss_a_coin_to_your" File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at witcher.vhd(15): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/witcher.vhd Line: 15
+Warning (13012): Latch bd:B1|rst_temp has unsafe behavior File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sw9 File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 6
+Warning (13012): Latch bd:B6|rst_temp has unsafe behavior File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sw9 File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 6
+Warning (13012): Latch bd:B2|rst_temp has unsafe behavior File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sw9 File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 6
+Warning (13012): Latch bd:B5|rst_temp has unsafe behavior File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sw9 File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 6
+Warning (13012): Latch bd:B3|rst_temp has unsafe behavior File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sw9 File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 6
+Warning (13012): Latch bd:B4|rst_temp has unsafe behavior File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/bd.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sw9 File: D:/Bibliothèque/ECE/ING2/TP VHDL/projet/VHDL/top.vhd Line: 6
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 231 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+Info (21057): Implemented 284 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 43 output pins
-    Info (21061): Implemented 187 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 966 megabytes
-    Info: Processing ended: Fri Mar  6 14:40:29 2020
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info (21061): Implemented 238 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Fri Mar 06 21:25:55 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
 
 
