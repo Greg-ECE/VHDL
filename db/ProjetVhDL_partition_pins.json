@@ -172,6 +172,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ledclk",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				}

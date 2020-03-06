@@ -4,7 +4,8 @@ use IEEE.numeric_std.all;
 
 entity top is
 	port (clk : in std_logic;
-			a1,a2,a3,a4,a5,a6 : out std_logic_vector (6 downto 0));
+			a1,a2,a3,a4,a5,a6 : out std_logic_vector (6 downto 0);
+			ledclk : out std_logic);
 end;
 
 -----------------------------------
@@ -34,7 +35,7 @@ end component;
 
 -----------------------------------
 
-signal TwoHzclk : std_logic;
+signal TwoHzclk, temp : std_logic;
 signal s0,s1,s2,s3,s4,s5,s6 : std_logic_vector (4 downto 0);
 
 -----------------------------------
@@ -55,6 +56,17 @@ begin
 	D4 : dcd port map (s4,a4);
 	D5 : dcd port map (s5,a5);
 	D6 : dcd port map (s6,a6);
+	
+	process (TwoHzclk)
+	begin
+		if (TwoHzclk'Event AND TwoHzclk='1' AND temp='1') then
+			temp<='0';
+			ledclk <= '1';
+		elsif (TwoHzclk'Event AND TwoHzclk='1' AND temp='0') then
+			ledclk <= '0';
+			temp<='1';
+		end if;
+	end process;
 	
 
 end behavioural;

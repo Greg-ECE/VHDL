@@ -20,7 +20,7 @@ begin
 		if rising_edge(clk) then
 		
 			if (timer < "10011000100101101000000") then
-				timer <= timer + "1";
+				timer <= timer + '1';
 				TwoHzclk <= '0';
 			else 
 				timer <= "00000000000000000000000";

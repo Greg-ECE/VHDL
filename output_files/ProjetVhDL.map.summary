@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Mar 03 13:47:47 2020
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Fri Mar  6 14:40:29 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : ProjetVhDL
 Top-level Entity Name : top
 Family : MAX 10
-Total logic elements : 172
-    Total combinational functions : 147
-    Dedicated logic registers : 59
-Total registers : 59
-Total pins : 43
+Total logic elements : 186
+    Total combinational functions : 160
+    Dedicated logic registers : 61
+Total registers : 61
+Total pins : 44
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

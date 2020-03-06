@@ -1,6 +1,6 @@
 Timing Analyzer report for ProjetVhDL
-Tue Mar 03 13:48:08 2020
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Fri Mar  6 14:40:40 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
 ---------------------
@@ -51,9 +51,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2019  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -63,14 +63,15 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +-----------------------------------------------------------------------------+
 ; Timing Analyzer Summary                                                     ;
 +-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Quartus Prime Version ; Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Timing Analyzer       ; Legacy Timing Analyzer                              ;
 ; Revision Name         ; ProjetVhDL                                          ;
 ; Device Family         ; MAX 10                                              ;
@@ -86,15 +87,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.06        ;
-; Maximum used               ; 6           ;
+; Average used               ; 1.07        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   1.2%      ;
+;     Processor 2            ;   2.5%      ;
+;     Processors 3-4         ;   2.4%      ;
 +----------------------------+-------------+
 
 
@@ -108,14 +110,14 @@ refer to the applicable agreement for further details.
 +-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                             ;
-+------------+-----------------+-----------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name      ; Note                                                          ;
-+------------+-----------------+-----------------+---------------------------------------------------------------+
-; 251.83 MHz ; 250.0 MHz       ; clk             ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 476.87 MHz ; 416.15 MHz      ; dc:Div|TwoHzclk ; limit due to minimum period restriction (tmin)                ;
-+------------+-----------------+-----------------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                              ;
++------------+-----------------+-----------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name      ; Note                                           ;
++------------+-----------------+-----------------+------------------------------------------------+
+; 238.1 MHz  ; 238.1 MHz       ; clk             ;                                                ;
+; 479.62 MHz ; 416.15 MHz      ; dc:Div|TwoHzclk ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+-----------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -124,8 +126,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; clk             ; -2.971 ; -62.384       ;
-; dc:Div|TwoHzclk ; -1.097 ; -18.793       ;
+; clk             ; -3.200 ; -67.268       ;
+; dc:Div|TwoHzclk ; -1.085 ; -19.619       ;
 +-----------------+--------+---------------+
 
 
@@ -134,8 +136,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; dc:Div|TwoHzclk ; 0.458 ; 0.000         ;
-; clk             ; 0.573 ; 0.000         ;
+; dc:Div|TwoHzclk ; 0.345 ; 0.000         ;
+; clk             ; 0.572 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -157,7 +159,7 @@ No paths to report.
 ; Clock           ; Slack  ; End Point TNS          ;
 +-----------------+--------+------------------------+
 ; clk             ; -3.000 ; -36.672                ;
-; dc:Div|TwoHzclk ; -1.403 ; -49.105                ;
+; dc:Div|TwoHzclk ; -1.403 ; -51.911                ;
 +-----------------+--------+------------------------+
 
 
@@ -172,8 +174,8 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name      ; Note                                                          ;
 +------------+-----------------+-----------------+---------------------------------------------------------------+
-; 268.82 MHz ; 250.0 MHz       ; clk             ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 520.02 MHz ; 416.15 MHz      ; dc:Div|TwoHzclk ; limit due to minimum period restriction (tmin)                ;
+; 256.48 MHz ; 250.0 MHz       ; clk             ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 523.83 MHz ; 416.15 MHz      ; dc:Div|TwoHzclk ; limit due to minimum period restriction (tmin)                ;
 +------------+-----------------+-----------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -183,8 +185,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; clk             ; -2.720 ; -56.599       ;
-; dc:Div|TwoHzclk ; -0.923 ; -14.248       ;
+; clk             ; -2.899 ; -60.453       ;
+; dc:Div|TwoHzclk ; -0.909 ; -15.331       ;
 +-----------------+--------+---------------+
 
 
@@ -193,8 +195,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; dc:Div|TwoHzclk ; 0.416 ; 0.000         ;
-; clk             ; 0.527 ; 0.000         ;
+; dc:Div|TwoHzclk ; 0.312 ; 0.000         ;
+; clk             ; 0.526 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -216,7 +218,7 @@ No paths to report.
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
 ; clk             ; -3.000 ; -36.672               ;
-; dc:Div|TwoHzclk ; -1.403 ; -49.105               ;
+; dc:Div|TwoHzclk ; -1.403 ; -51.911               ;
 +-----------------+--------+-----------------------+
 
 
@@ -231,8 +233,8 @@ No synchronizer chains to report.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; clk             ; -0.724 ; -13.326       ;
-; dc:Div|TwoHzclk ; 0.113  ; 0.000         ;
+; clk             ; -0.786 ; -14.456       ;
+; dc:Div|TwoHzclk ; 0.121  ; 0.000         ;
 +-----------------+--------+---------------+
 
 
@@ -241,8 +243,8 @@ No synchronizer chains to report.
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; dc:Div|TwoHzclk ; 0.186 ; 0.000         ;
-; clk             ; 0.213 ; 0.000         ;
+; dc:Div|TwoHzclk ; 0.148 ; 0.000         ;
+; clk             ; 0.212 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -263,8 +265,8 @@ No paths to report.
 +-----------------+--------+-----------------------+
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
-; clk             ; -3.000 ; -27.648               ;
-; dc:Div|TwoHzclk ; -1.000 ; -35.000               ;
+; clk             ; -3.000 ; -27.871               ;
+; dc:Div|TwoHzclk ; -1.000 ; -37.000               ;
 +-----------------+--------+-----------------------+
 
 
@@ -279,12 +281,12 @@ No synchronizer chains to report.
 +------------------+---------+-------+----------+---------+---------------------+
 ; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -2.971  ; 0.186 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -2.971  ; 0.213 ; N/A      ; N/A     ; -3.000              ;
-;  dc:Div|TwoHzclk ; -1.097  ; 0.186 ; N/A      ; N/A     ; -1.403              ;
-; Design-wide TNS  ; -81.177 ; 0.0   ; 0.0      ; 0.0     ; -85.777             ;
-;  clk             ; -62.384 ; 0.000 ; N/A      ; N/A     ; -36.672             ;
-;  dc:Div|TwoHzclk ; -18.793 ; 0.000 ; N/A      ; N/A     ; -49.105             ;
+; Worst-case Slack ; -3.200  ; 0.148 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -3.200  ; 0.212 ; N/A      ; N/A     ; -3.000              ;
+;  dc:Div|TwoHzclk ; -1.085  ; 0.148 ; N/A      ; N/A     ; -1.403              ;
+; Design-wide TNS  ; -86.887 ; 0.0   ; 0.0      ; 0.0     ; -88.583             ;
+;  clk             ; -67.268 ; 0.000 ; N/A      ; N/A     ; -36.672             ;
+;  dc:Div|TwoHzclk ; -19.619 ; 0.000 ; N/A      ; N/A     ; -51.911             ;
 +------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -335,6 +337,7 @@ No synchronizer chains to report.
 ; a6[4]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; a6[5]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; a6[6]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ledclk       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
@@ -402,7 +405,8 @@ No synchronizer chains to report.
 ; a6[4]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; a6[5]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; a6[6]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.39e-08 V                   ; 2.39 V              ; -0.0409 V           ; 0.21 V                               ; 0.121 V                              ; 4.7e-10 s                   ; 5.93e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.39e-08 V                  ; 2.39 V             ; -0.0409 V          ; 0.21 V                              ; 0.121 V                             ; 4.7e-10 s                  ; 5.93e-10 s                 ; No                        ; Yes                       ;
+; ledclk       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.39e-08 V                   ; 2.39 V              ; -0.0407 V           ; 0.211 V                              ; 0.121 V                              ; 4.7e-10 s                   ; 5.93e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.39e-08 V                  ; 2.39 V             ; -0.0407 V          ; 0.211 V                             ; 0.121 V                             ; 4.7e-10 s                  ; 5.93e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -453,7 +457,8 @@ No synchronizer chains to report.
 ; a6[4]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; a6[5]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; a6[6]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-06 V                   ; 2.36 V              ; -0.0173 V           ; 0.144 V                              ; 0.094 V                              ; 6.44e-10 s                  ; 7.2e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-06 V                  ; 2.36 V             ; -0.0173 V          ; 0.144 V                             ; 0.094 V                             ; 6.44e-10 s                 ; 7.2e-10 s                  ; No                        ; Yes                       ;
+; ledclk       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-06 V                   ; 2.36 V              ; -0.0174 V           ; 0.144 V                              ; 0.094 V                              ; 6.44e-10 s                  ; 7.22e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-06 V                  ; 2.36 V             ; -0.0174 V          ; 0.144 V                             ; 0.094 V                             ; 6.44e-10 s                 ; 7.22e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -504,7 +509,8 @@ No synchronizer chains to report.
 ; a6[4]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; a6[5]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; a6[6]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
+; ledclk       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0396 V           ; 0.362 V                              ; 0.108 V                              ; 3.11e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0396 V          ; 0.362 V                             ; 0.108 V                             ; 3.11e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -513,8 +519,8 @@ No synchronizer chains to report.
 +-----------------+-----------------+----------+----------+----------+----------+
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
-; clk             ; clk             ; 732      ; 0        ; 0        ; 0        ;
-; dc:Div|TwoHzclk ; dc:Div|TwoHzclk ; 85       ; 0        ; 0        ; 0        ;
+; clk             ; clk             ; 684      ; 0        ; 0        ; 0        ;
+; dc:Div|TwoHzclk ; dc:Div|TwoHzclk ; 87       ; 0        ; 0        ; 0        ;
 +-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -524,8 +530,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------+-----------------+----------+----------+----------+----------+
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
-; clk             ; clk             ; 732      ; 0        ; 0        ; 0        ;
-; dc:Div|TwoHzclk ; dc:Div|TwoHzclk ; 85       ; 0        ; 0        ; 0        ;
+; clk             ; clk             ; 684      ; 0        ; 0        ; 0        ;
+; dc:Div|TwoHzclk ; dc:Div|TwoHzclk ; 87       ; 0        ; 0        ; 0        ;
 +-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -551,8 +557,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 42    ; 42   ;
-; Unconstrained Output Port Paths ; 210   ; 210  ;
+; Unconstrained Output Ports      ; 43    ; 43   ;
+; Unconstrained Output Port Paths ; 211   ; 211  ;
 +---------------------------------+-------+------+
 
 
@@ -613,6 +619,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; a6[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; a6[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; a6[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ledclk      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -663,6 +670,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; a6[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; a6[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; a6[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ledclk      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -671,12 +679,12 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 03 13:48:05 2020
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Fri Mar  6 14:40:38 2020
 Info: Command: quartus_sta ProjetVhDL -c ProjetVhDL
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ProjetVhDL.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -690,71 +698,71 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.971
+Info (332146): Worst-case setup slack is -3.200
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.971             -62.384 clk 
-    Info (332119):    -1.097             -18.793 dc:Div|TwoHzclk 
-Info (332146): Worst-case hold slack is 0.458
+    Info (332119):    -3.200             -67.268 clk 
+    Info (332119):    -1.085             -19.619 dc:Div|TwoHzclk 
+Info (332146): Worst-case hold slack is 0.345
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.458               0.000 dc:Div|TwoHzclk 
-    Info (332119):     0.573               0.000 clk 
+    Info (332119):     0.345               0.000 dc:Div|TwoHzclk 
+    Info (332119):     0.572               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -36.672 clk 
-    Info (332119):    -1.403             -49.105 dc:Div|TwoHzclk 
+    Info (332119):    -1.403             -51.911 dc:Div|TwoHzclk 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.720
+Info (332146): Worst-case setup slack is -2.899
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.720             -56.599 clk 
-    Info (332119):    -0.923             -14.248 dc:Div|TwoHzclk 
-Info (332146): Worst-case hold slack is 0.416
+    Info (332119):    -2.899             -60.453 clk 
+    Info (332119):    -0.909             -15.331 dc:Div|TwoHzclk 
+Info (332146): Worst-case hold slack is 0.312
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.416               0.000 dc:Div|TwoHzclk 
-    Info (332119):     0.527               0.000 clk 
+    Info (332119):     0.312               0.000 dc:Div|TwoHzclk 
+    Info (332119):     0.526               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -36.672 clk 
-    Info (332119):    -1.403             -49.105 dc:Div|TwoHzclk 
+    Info (332119):    -1.403             -51.911 dc:Div|TwoHzclk 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.724
+Info (332146): Worst-case setup slack is -0.786
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.724             -13.326 clk 
-    Info (332119):     0.113               0.000 dc:Div|TwoHzclk 
-Info (332146): Worst-case hold slack is 0.186
+    Info (332119):    -0.786             -14.456 clk 
+    Info (332119):     0.121               0.000 dc:Div|TwoHzclk 
+Info (332146): Worst-case hold slack is 0.148
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.186               0.000 dc:Div|TwoHzclk 
-    Info (332119):     0.213               0.000 clk 
+    Info (332119):     0.148               0.000 dc:Div|TwoHzclk 
+    Info (332119):     0.212               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -27.648 clk 
-    Info (332119):    -1.000             -35.000 dc:Div|TwoHzclk 
+    Info (332119):    -3.000             -27.871 clk 
+    Info (332119):    -1.000             -37.000 dc:Div|TwoHzclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Tue Mar 03 13:48:08 2020
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 852 megabytes
+    Info: Processing ended: Fri Mar  6 14:40:40 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

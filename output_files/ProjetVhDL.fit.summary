@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Mar 03 13:47:59 2020
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Fitter Status : Successful - Fri Mar  6 14:40:35 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : ProjetVhDL
 Top-level Entity Name : top
 Family : MAX 10
 Device : 10M25DAF484C7G
 Timing Models : Final
-Total logic elements : 152 / 24,960 ( < 1 % )
-    Total combinational functions : 148 / 24,960 ( < 1 % )
-    Dedicated logic registers : 59 / 24,960 ( < 1 % )
-Total registers : 59
-Total pins : 43 / 360 ( 12 % )
+Total logic elements : 169 / 24,960 ( < 1 % )
+    Total combinational functions : 161 / 24,960 ( < 1 % )
+    Dedicated logic registers : 61 / 24,960 ( < 1 % )
+Total registers : 61
+Total pins : 44 / 360 ( 12 % )
 Total virtual pins : 0
 Total memory bits : 0 / 691,200 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 110 ( 0 % )
