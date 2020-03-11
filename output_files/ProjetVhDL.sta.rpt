@@ -1,5 +1,5 @@
 Timing Analyzer report for ProjetVhDL
-Fri Mar 06 21:26:17 2020
+Mon Mar 09 10:25:15 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -119,9 +119,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-----------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name      ; Note                                                          ;
 +------------+-----------------+-----------------+---------------------------------------------------------------+
-; 186.92 MHz ; 186.92 MHz      ; clk             ;                                                               ;
-; 300.93 MHz ; 300.93 MHz      ; dc:Div|TwoHzclk ;                                                               ;
-; 476.64 MHz ; 250.0 MHz       ; sw9             ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 190.4 MHz  ; 190.4 MHz       ; clk             ;                                                               ;
+; 260.48 MHz ; 260.48 MHz      ; dc:Div|TwoHzclk ;                                                               ;
+; 676.59 MHz ; 250.0 MHz       ; sw9             ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+-----------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -131,9 +131,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; clk             ; -4.350 ; -95.699       ;
-; dc:Div|TwoHzclk ; -2.323 ; -32.770       ;
-; sw9             ; -0.549 ; -1.917        ;
+; clk             ; -4.252 ; -94.583       ;
+; dc:Div|TwoHzclk ; -2.839 ; -28.632       ;
+; sw9             ; -0.239 ; -0.457        ;
 +-----------------+--------+---------------+
 
 
@@ -142,9 +142,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; sw9             ; -0.658 ; -3.116        ;
-; dc:Div|TwoHzclk ; 0.343  ; 0.000         ;
-; clk             ; 0.507  ; 0.000         ;
+; sw9             ; -0.982 ; -5.546        ;
+; dc:Div|TwoHzclk ; 0.231  ; 0.000         ;
+; clk             ; 0.616  ; 0.000         ;
 +-----------------+--------+---------------+
 
 
@@ -153,7 +153,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; dc:Div|TwoHzclk ; -3.603 ; -102.250      ;
+; dc:Div|TwoHzclk ; -3.800 ; -108.875      ;
 +-----------------+--------+---------------+
 
 
@@ -162,7 +162,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; dc:Div|TwoHzclk ; 2.033 ; 0.000         ;
+; dc:Div|TwoHzclk ; 2.151 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -188,9 +188,9 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name      ; Note                                                          ;
 +------------+-----------------+-----------------+---------------------------------------------------------------+
-; 203.17 MHz ; 203.17 MHz      ; clk             ;                                                               ;
-; 328.84 MHz ; 328.84 MHz      ; dc:Div|TwoHzclk ;                                                               ;
-; 468.16 MHz ; 250.0 MHz       ; sw9             ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 206.53 MHz ; 206.53 MHz      ; clk             ;                                                               ;
+; 282.17 MHz ; 282.17 MHz      ; dc:Div|TwoHzclk ;                                                               ;
+; 635.32 MHz ; 250.0 MHz       ; sw9             ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+-----------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -200,9 +200,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; clk             ; -3.922 ; -86.228       ;
-; dc:Div|TwoHzclk ; -2.041 ; -27.154       ;
-; sw9             ; -0.568 ; -1.960        ;
+; clk             ; -3.842 ; -85.382       ;
+; dc:Div|TwoHzclk ; -2.544 ; -23.902       ;
+; sw9             ; -0.287 ; -0.548        ;
 +-----------------+--------+---------------+
 
 
@@ -211,9 +211,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; sw9             ; -0.598 ; -2.859        ;
+; sw9             ; -0.895 ; -5.069        ;
 ; dc:Div|TwoHzclk ; 0.310  ; 0.000         ;
-; clk             ; 0.451  ; 0.000         ;
+; clk             ; 0.551  ; 0.000         ;
 +-----------------+--------+---------------+
 
 
@@ -222,7 +222,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; dc:Div|TwoHzclk ; -3.351 ; -95.470       ;
+; dc:Div|TwoHzclk ; -3.524 ; -101.440      ;
 +-----------------+--------+---------------+
 
 
@@ -231,7 +231,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; dc:Div|TwoHzclk ; 1.896 ; 0.000         ;
+; dc:Div|TwoHzclk ; 2.019 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -257,9 +257,9 @@ No synchronizer chains to report.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; clk             ; -1.213 ; -24.514       ;
-; dc:Div|TwoHzclk ; -0.558 ; -2.816        ;
-; sw9             ; 0.396  ; 0.000         ;
+; clk             ; -1.178 ; -24.069       ;
+; dc:Div|TwoHzclk ; -0.683 ; -3.415        ;
+; sw9             ; 0.521  ; 0.000         ;
 +-----------------+--------+---------------+
 
 
@@ -268,9 +268,9 @@ No synchronizer chains to report.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; sw9             ; -0.259 ; -1.128        ;
-; dc:Div|TwoHzclk ; -0.039 ; -0.195        ;
-; clk             ; 0.184  ; 0.000         ;
+; sw9             ; -0.398 ; -2.210        ;
+; dc:Div|TwoHzclk ; -0.180 ; -0.900        ;
+; clk             ; 0.228  ; 0.000         ;
 +-----------------+--------+---------------+
 
 
@@ -279,7 +279,7 @@ No synchronizer chains to report.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; dc:Div|TwoHzclk ; -1.444 ; -40.360       ;
+; dc:Div|TwoHzclk ; -1.575 ; -44.410       ;
 +-----------------+--------+---------------+
 
 
@@ -288,7 +288,7 @@ No synchronizer chains to report.
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; dc:Div|TwoHzclk ; 0.578 ; 0.000         ;
+; dc:Div|TwoHzclk ; 0.661 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -297,7 +297,7 @@ No synchronizer chains to report.
 +-----------------+--------+-----------------------+
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
-; clk             ; -3.000 ; -29.088               ;
+; clk             ; -3.000 ; -29.043               ;
 ; sw9             ; -3.000 ; -3.000                ;
 ; dc:Div|TwoHzclk ; -1.000 ; -37.000               ;
 +-----------------+--------+-----------------------+
@@ -314,14 +314,14 @@ No synchronizer chains to report.
 +------------------+----------+--------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack ; -4.350   ; -0.658 ; -3.603   ; 0.578   ; -3.000              ;
-;  clk             ; -4.350   ; 0.184  ; N/A      ; N/A     ; -3.000              ;
-;  dc:Div|TwoHzclk ; -2.323   ; -0.039 ; -3.603   ; 0.578   ; -1.403              ;
-;  sw9             ; -0.568   ; -0.658 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -130.386 ; -3.116 ; -102.25  ; 0.0     ; -92.986             ;
-;  clk             ; -95.699  ; 0.000  ; N/A      ; N/A     ; -38.075             ;
-;  dc:Div|TwoHzclk ; -32.770  ; -0.195 ; -102.250 ; 0.000   ; -51.911             ;
-;  sw9             ; -1.960   ; -3.116 ; N/A      ; N/A     ; -3.000              ;
+; Worst-case Slack ; -4.252   ; -0.982 ; -3.800   ; 0.661   ; -3.000              ;
+;  clk             ; -4.252   ; 0.228  ; N/A      ; N/A     ; -3.000              ;
+;  dc:Div|TwoHzclk ; -2.839   ; -0.180 ; -3.800   ; 0.661   ; -1.403              ;
+;  sw9             ; -0.287   ; -0.982 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -123.672 ; -5.546 ; -108.875 ; 0.0     ; -92.986             ;
+;  clk             ; -94.583  ; 0.000  ; N/A      ; N/A     ; -38.075             ;
+;  dc:Div|TwoHzclk ; -28.632  ; -0.900 ; -108.875 ; 0.000   ; -51.911             ;
+;  sw9             ; -0.548   ; -5.546 ; N/A      ; N/A     ; -3.000              ;
 +------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -557,7 +557,7 @@ No synchronizer chains to report.
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
 ; clk             ; clk             ; 750      ; 0        ; 0        ; 0        ;
-; dc:Div|TwoHzclk ; dc:Div|TwoHzclk ; 116      ; 0        ; 0        ; 0        ;
+; dc:Div|TwoHzclk ; dc:Div|TwoHzclk ; 125      ; 0        ; 0        ; 0        ;
 ; sw9             ; dc:Div|TwoHzclk ; 10       ; 10       ; 0        ; 0        ;
 ; sw9             ; sw9             ; 0        ; 0        ; 6        ; 6        ;
 +-----------------+-----------------+----------+----------+----------+----------+
@@ -570,7 +570,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
 ; clk             ; clk             ; 750      ; 0        ; 0        ; 0        ;
-; dc:Div|TwoHzclk ; dc:Div|TwoHzclk ; 116      ; 0        ; 0        ; 0        ;
+; dc:Div|TwoHzclk ; dc:Div|TwoHzclk ; 125      ; 0        ; 0        ; 0        ;
 ; sw9             ; dc:Div|TwoHzclk ; 10       ; 10       ; 0        ; 0        ;
 ; sw9             ; sw9             ; 0        ; 0        ; 6        ; 6        ;
 +-----------------+-----------------+----------+----------+----------+----------+
@@ -762,7 +762,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Mar 06 21:26:14 2020
+    Info: Processing started: Mon Mar 09 10:25:12 2020
 Info: Command: quartus_sta ProjetVhDL -c ProjetVhDL
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -778,37 +778,37 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name sw9 sw9
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: B1|process_0~0  from: datac  to: combout
-    Info (332098): Cell: B2|process_0~0  from: dataa  to: combout
-    Info (332098): Cell: B3|process_0~0  from: datab  to: combout
+    Info (332098): Cell: B2|process_0~0  from: datab  to: combout
+    Info (332098): Cell: B3|process_0~0  from: dataa  to: combout
     Info (332098): Cell: B4|process_0~0  from: dataa  to: combout
     Info (332098): Cell: B5|process_0~0  from: datab  to: combout
-    Info (332098): Cell: B6|process_0~0  from: datac  to: combout
+    Info (332098): Cell: B6|process_0~0  from: dataa  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.350
+Info (332146): Worst-case setup slack is -4.252
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.350             -95.699 clk 
-    Info (332119):    -2.323             -32.770 dc:Div|TwoHzclk 
-    Info (332119):    -0.549              -1.917 sw9 
-Info (332146): Worst-case hold slack is -0.658
+    Info (332119):    -4.252             -94.583 clk 
+    Info (332119):    -2.839             -28.632 dc:Div|TwoHzclk 
+    Info (332119):    -0.239              -0.457 sw9 
+Info (332146): Worst-case hold slack is -0.982
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.658              -3.116 sw9 
-    Info (332119):     0.343               0.000 dc:Div|TwoHzclk 
-    Info (332119):     0.507               0.000 clk 
-Info (332146): Worst-case recovery slack is -3.603
+    Info (332119):    -0.982              -5.546 sw9 
+    Info (332119):     0.231               0.000 dc:Div|TwoHzclk 
+    Info (332119):     0.616               0.000 clk 
+Info (332146): Worst-case recovery slack is -3.800
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.603            -102.250 dc:Div|TwoHzclk 
-Info (332146): Worst-case removal slack is 2.033
+    Info (332119):    -3.800            -108.875 dc:Div|TwoHzclk 
+Info (332146): Worst-case removal slack is 2.151
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.033               0.000 dc:Div|TwoHzclk 
+    Info (332119):     2.151               0.000 dc:Div|TwoHzclk 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -820,33 +820,33 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: B1|process_0~0  from: datac  to: combout
-    Info (332098): Cell: B2|process_0~0  from: dataa  to: combout
-    Info (332098): Cell: B3|process_0~0  from: datab  to: combout
+    Info (332098): Cell: B2|process_0~0  from: datab  to: combout
+    Info (332098): Cell: B3|process_0~0  from: dataa  to: combout
     Info (332098): Cell: B4|process_0~0  from: dataa  to: combout
     Info (332098): Cell: B5|process_0~0  from: datab  to: combout
-    Info (332098): Cell: B6|process_0~0  from: datac  to: combout
+    Info (332098): Cell: B6|process_0~0  from: dataa  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.922
+Info (332146): Worst-case setup slack is -3.842
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.922             -86.228 clk 
-    Info (332119):    -2.041             -27.154 dc:Div|TwoHzclk 
-    Info (332119):    -0.568              -1.960 sw9 
-Info (332146): Worst-case hold slack is -0.598
+    Info (332119):    -3.842             -85.382 clk 
+    Info (332119):    -2.544             -23.902 dc:Div|TwoHzclk 
+    Info (332119):    -0.287              -0.548 sw9 
+Info (332146): Worst-case hold slack is -0.895
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.598              -2.859 sw9 
+    Info (332119):    -0.895              -5.069 sw9 
     Info (332119):     0.310               0.000 dc:Div|TwoHzclk 
-    Info (332119):     0.451               0.000 clk 
-Info (332146): Worst-case recovery slack is -3.351
+    Info (332119):     0.551               0.000 clk 
+Info (332146): Worst-case recovery slack is -3.524
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.351             -95.470 dc:Div|TwoHzclk 
-Info (332146): Worst-case removal slack is 1.896
+    Info (332119):    -3.524            -101.440 dc:Div|TwoHzclk 
+Info (332146): Worst-case removal slack is 2.019
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.896               0.000 dc:Div|TwoHzclk 
+    Info (332119):     2.019               0.000 dc:Div|TwoHzclk 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -856,45 +856,45 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info: Analyzing Fast 1200mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: B1|process_0~0  from: datac  to: combout
-    Info (332098): Cell: B2|process_0~0  from: dataa  to: combout
-    Info (332098): Cell: B3|process_0~0  from: datab  to: combout
+    Info (332098): Cell: B2|process_0~0  from: datab  to: combout
+    Info (332098): Cell: B3|process_0~0  from: dataa  to: combout
     Info (332098): Cell: B4|process_0~0  from: dataa  to: combout
     Info (332098): Cell: B5|process_0~0  from: datab  to: combout
-    Info (332098): Cell: B6|process_0~0  from: datac  to: combout
+    Info (332098): Cell: B6|process_0~0  from: dataa  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.213
+Info (332146): Worst-case setup slack is -1.178
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.213             -24.514 clk 
-    Info (332119):    -0.558              -2.816 dc:Div|TwoHzclk 
-    Info (332119):     0.396               0.000 sw9 
-Info (332146): Worst-case hold slack is -0.259
+    Info (332119):    -1.178             -24.069 clk 
+    Info (332119):    -0.683              -3.415 dc:Div|TwoHzclk 
+    Info (332119):     0.521               0.000 sw9 
+Info (332146): Worst-case hold slack is -0.398
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.259              -1.128 sw9 
-    Info (332119):    -0.039              -0.195 dc:Div|TwoHzclk 
-    Info (332119):     0.184               0.000 clk 
-Info (332146): Worst-case recovery slack is -1.444
+    Info (332119):    -0.398              -2.210 sw9 
+    Info (332119):    -0.180              -0.900 dc:Div|TwoHzclk 
+    Info (332119):     0.228               0.000 clk 
+Info (332146): Worst-case recovery slack is -1.575
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.444             -40.360 dc:Div|TwoHzclk 
-Info (332146): Worst-case removal slack is 0.578
+    Info (332119):    -1.575             -44.410 dc:Div|TwoHzclk 
+Info (332146): Worst-case removal slack is 0.661
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.578               0.000 dc:Div|TwoHzclk 
+    Info (332119):     0.661               0.000 dc:Div|TwoHzclk 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -29.088 clk 
+    Info (332119):    -3.000             -29.043 clk 
     Info (332119):    -3.000              -3.000 sw9 
     Info (332119):    -1.000             -37.000 dc:Div|TwoHzclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Fri Mar 06 21:26:17 2020
+    Info: Peak virtual memory: 4824 megabytes
+    Info: Processing ended: Mon Mar 09 10:25:15 2020
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 
