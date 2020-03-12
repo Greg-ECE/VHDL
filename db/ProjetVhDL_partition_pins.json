@@ -176,6 +176,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "sw9",
+					"strict" : false
+				},
+				{
+					"name" : "sw0",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				}
